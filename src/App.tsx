@@ -3,7 +3,7 @@ import QuestionCard from "./components/QuestionCard";
 import { fetchQuizQueston } from "./API";
 import { Difficultly } from "./API";
 import { QuestionState } from "./API";
-import { GlobalStyle, Wrapper } from "./App.styles";
+import { GlobalStyle, Wrapper, FinsihWrapper } from "./App.styles";
 
 export type UserAnswer = {
   question: string;
@@ -100,19 +100,17 @@ const App = () => {
         <h1>Quiz App</h1>
         {gameStart && (
           <button className="start" onClick={startTriviaAPI}>
-            Start Game
+            Começar o quiz
           </button>
         )}
 
-        {!gameStart && <p className="score">Score: {score}</p>}
-
+        {!gameStart && !gameOver && <p className="score">Pontuação: {score}</p>}
         {!gameStart && !loading && counter > 0 && (
           <p className="score">
-            {minutes}:{seconds}
+            Tempo restantes: {minutes}:{seconds}
           </p>
         )}
-
-        {loading && <p>Loading Questions ...</p>}
+        {loading && <p>Carregando perguntas...</p>}
 
         {!loading && !gameStart && !gameOver && (
           <QuestionCard
@@ -124,13 +122,13 @@ const App = () => {
             callback={checkAnswer}
           />
         )}
-
+    
         {!gameStart &&
           !loading &&
           userAnswers.length === number + 1 &&
           number !== TOTAL_QUESTIONS - 1 && (
             <button className="next" onClick={nextQuestion}>
-              Next Question
+              Próxima questão
             </button>
           )}
 
@@ -140,17 +138,19 @@ const App = () => {
           userAnswers.length === number + 1 &&
           number === TOTAL_QUESTIONS - 1 && (
             <button className="next" onClick={nextQuestion}>
-              Finish quiz
+              Finalizar o quiz
             </button>
           )}
 
         {!gameStart && gameOver && !loading && (
-          <>
-            Finished the quiz!
+          <FinsihWrapper>
+            <h1>{score > 2 ? 'Parabéns!' : 'Que pena!'}</h1>
+            <p>Você terminou o quiz!</p>
+            <p>Sua pontuação foi: {score} acertos</p>
             <button className="start" onClick={() => window.location.reload()}>
-              Start Game again!
+              Voltar para o início
             </button>
-          </>
+          </FinsihWrapper>
         )}
       </Wrapper>
     </>
