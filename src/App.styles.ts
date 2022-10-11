@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 //@ts-ignore
-import BGiImg from "./images/quiz.jpg";
+import BGiImg from "./images/quiz.jpeg";
 
 export const GlobalStyle = createGlobalStyle`
 html{
@@ -31,9 +31,8 @@ export const Wrapper = styled.div`
     margin: 0;
   }
   h1 {
-    font-family: fascinate Inline, Hattenschweiler, "Arial Narrow Bold",
-      sans-serif;
-    background-image: linear-gradient(180deg, #fff, #87f1ff);
+    font-family: 'Poppins', sans-serif;
+    background: #87f1ff;
     background-size: 100%;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;

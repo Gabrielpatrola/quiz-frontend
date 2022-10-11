@@ -29,14 +29,14 @@ const App = () => {
     setLoading(true);
     setScore(0);
     setNumber(0);
-    setGameStart(false);
-    setGameOver(false);
 
     const questionApi = await fetchQuizQueston(
       TOTAL_QUESTIONS,
       Difficultly.EASY
     );
 
+    setGameStart(false);
+    setGameOver(false);
     setQuestions(questionApi);
     setCounter(180);
     setLoading(false);
@@ -76,7 +76,6 @@ const App = () => {
   };
 
   useEffect(() => {
-    console.log('aq', counter)
     const intervalId = setInterval(() => {
       setCounter(counter - 1);
     }, 1000);
@@ -91,14 +90,14 @@ const App = () => {
       setCounter(180);
     }
     return () => clearInterval(intervalId);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [counter, gameStart, gameOver]);
 
   return (
     <>
       <GlobalStyle />
       <Wrapper>
-        <h1>REACT QUIZ</h1>
+        <h1>Quiz App</h1>
         {gameStart && (
           <button className="start" onClick={startTriviaAPI}>
             Start Game
@@ -108,9 +107,9 @@ const App = () => {
         {!gameStart && <p className="score">Score: {score}</p>}
 
         {!gameStart && !loading && counter > 0 && (
-          <span>
+          <p className="score">
             {minutes}:{seconds}
-          </span>
+          </p>
         )}
 
         {loading && <p>Loading Questions ...</p>}
