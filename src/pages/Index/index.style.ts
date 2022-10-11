@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 //@ts-ignore
-import BGiImg from "./images/quiz.jpeg";
+import BGiImg from "../../images/quiz.jpeg";
 
 export const GlobalStyle = createGlobalStyle`
 html{
