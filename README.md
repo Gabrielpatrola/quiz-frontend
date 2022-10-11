@@ -56,7 +56,7 @@ Primeiro clone o repositório em seu computador, por meio do terminal utilizando
 
 2. Crie um arquivo `.env`
 
-Copie o arquivo `env.example` e crie um novo arquivo chamado `.env` e mude a váriavel caso necessário
+Copie o arquivo `env.example` e crie um novo arquivo chamado `.env` e mude a variável caso necessário
 
 3. Instalando as dependências do projeto
 
