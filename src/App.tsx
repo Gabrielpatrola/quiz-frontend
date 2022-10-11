@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import QuestionCard from "./components/QuestionCard";
 import { fetchQuizQueston } from "./API";
-import { Difficultly } from "./API";
 import { QuestionState } from "./API";
 import { GlobalStyle, Wrapper, FinsihWrapper } from "./App.styles";
 
@@ -30,10 +29,7 @@ const App = () => {
     setScore(0);
     setNumber(0);
 
-    const questionApi = await fetchQuizQueston(
-      TOTAL_QUESTIONS,
-      Difficultly.EASY
-    );
+    const questionApi = await fetchQuizQueston();
 
     setGameStart(false);
     setGameOver(false);
