@@ -1,46 +1,87 @@
-# Getting Started with Create React App
+# 📚 Quiz App Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+   <a href="https://pt-br.reactjs.org" target="_blank" rel="noopener">ReactJS</a> 
+</h1>
 
-## Available Scripts
+<p align="center">
+  <img alt="Develop by" src="https://img.shields.io/badge/Develop%20by-Gabriel%20Patrola-blue?style=flat&logo=Awesome-Lists">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/gabrielpatrola/growth-quiz-frontend?color=informational&style=flat&logo=GitHub-Actions">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/gabrielpatrola/growth-quiz-frontend?color=important&style=flat&logo=TypeScript">
+  <img alt="Made By" src="https://img.shields.io/github/license/gabrielpatrola/growth-quiz-frontend?&style=flat&logo=Google-Sheets">
+<p>
 
-In the project directory, you can run:
+<h3 align="center">
+  <a href="#-sobre">Sobre</a>
+  <span> · </span>
+  <a href="#-tecnologias-utilizadas">Tecnologias utilizadas</a>
+  <span> · </span>
+  <a href="#-como-usar">Como usar</a>
+  <span> · </span>
+  <a href="#-como-contribuir">Como contribuir</a>
+  <span> · </span>
+  <a href="#-licença">Licença</a>
+</h3>
 
-### `npm start`
+## 💭 Sobre
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Uma pequena aplicação de quiz usando a biblioteca React.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 👨‍💻 Tecnologias Utilizadas
 
-### `npm test`
+- <a href="https://reactjs.org/" target="_blank" rel="noopener">React</a>.
+- <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener">TypeScript</a> para tipagem do projeto como um todo.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⁉ Como usar
 
-### `npm run build`
+### 🤔 Pré-requisitos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para conseguir utilizar a aplicação sem nenhum problema é necessário ter:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Ter em sua máquina o **<a href="https://www.npmjs.com/" target="_blank" rel="noopener">NPM</a>** ou **<a href="https://yarnpkg.com/" target="_blank" rel="noopener">Yarn</a>** para o gerenciamento dos pacotes da aplicação
+- E não menos importante, o **<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>** para clonar o repositório em seu computador
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 📝 Passo a passo
 
-### `npm run eject`
+Primeiro clone o repositório em seu computador, por meio do terminal utilizando o comando:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clonando o repositório
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+  # Clone o repositório
+  $ git clone https://github.com/Gabrielpatrola/growth-quiz-frontend
+  # Entre na pasta raiz da aplicação
+  $ cd growth-quiz-frontend
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Crie um arquivo `.env`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Copie o arquivo `env.example` e crie um novo arquivo chamado `.env` e mude a váriavel caso necessário
 
-## Learn More
+3. Instalando as dependências do projeto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+  $ yarn # ou npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Iniciando a aplicação
+
+```sh
+  # Inicie a aplicação web
+  $ yarn start # ou npm start
+```
+
+Após seguir esses passos é possível acessar a aplicação em http://localhost:3000
+
+## 💪 Como contribuir
+
+Basta criar um fork do projeto, realizar as modificações que achar necessário e depois fazer um Pull Request.
+Toda ajuda é bem vinda, caso veja algum erro, não hesite em contribuir com o projeto!
+
+## 📃 Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](/LICENSE) para mais detalhes.
+
+---
+
+<sup> Feito com 💙 por <a href="https://github.com/gabrielpatrola" target="_blank" rel="noopener">Gabriel Patrola</a>
