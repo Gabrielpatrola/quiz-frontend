@@ -56,7 +56,15 @@ function Question() {
                     <td>
                       <button
                         className="start"
-                        onClick={() => history.push("/")}
+                        onClick={() =>
+                          history.push(`/admin/question/${item.id}`, {
+                            category: item.category,
+                            correct_answer: item.correct_answer,
+                            incorrect_answers: item.incorrect_answers,
+                            difficulty: item.difficulty,
+                            question: item.question,
+                          })
+                        }
                       >
                         Editar
                       </button>

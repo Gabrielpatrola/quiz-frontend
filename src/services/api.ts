@@ -40,8 +40,8 @@ export const CreateQuizQuestion = async (data: Questions) => {
   await api.post(`api/questions`, { ...data });
 };
 
-export const UpdateQuizQuestion = async (id: number, data: Questions) => {
-  const result = await api.post(`api/questions/${id}`, { data });
+export const UpdateQuizQuestion = async (id: string | number, data: Questions) => {
+  const result = await api.put(`api/questions/${id}`, { ...data });
 
   return result;
 };
