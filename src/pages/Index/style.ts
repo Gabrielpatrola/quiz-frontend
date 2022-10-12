@@ -76,4 +76,32 @@ export const GenericWrapper = styled.div`
   button {
     margin-left: 5px;
   }
+  form {
+    width:1100px;
+  }
+  label {
+    display: inline-block;
+    width: 110px;
+    font-family: "Poppins", sans-serif;
+  }
+  input{
+    width: 50%;
+    height: 56px;
+    position: relative;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    background-color: white;
+    color: #282828;
+    outline: none;
+    margin: 5px;
+    box-shadow: 0px 4px 20px 0px transparent;
+  }
+  div {
+    margin-top 5px;
+  }
 `;

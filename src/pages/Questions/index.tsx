@@ -75,7 +75,7 @@ function Question() {
           <button
             style={{ margin: 5 }}
             className="start"
-            onClick={() => history.push("/")}
+            onClick={() => history.push("/admin/question/create")}
           >
             Criar nova pergunta
           </button>

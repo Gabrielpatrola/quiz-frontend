@@ -4,7 +4,7 @@ import { shuffleArray } from "../utils";
 export type Questions = {
   category: string;
   correct_answer: string;
-  difficultly: string;
+  difficulty: string;
   incorrect_answers: string[];
   question: string;
   type: string;
@@ -36,18 +36,8 @@ export const fetchQuizQuestion = async () => {
   return shuffleArray(normalizeResponse);
 };
 
-export const CreateQuizQuestion = async (id: number) => {
-  const result = await api.post(`api/questions/${id}`);
-
-  const normalizeResponse = result.data.map((question: Questions) => ({
-    ...question,
-    answers: shuffleArray([
-      ...question.incorrect_answers,
-      question.correct_answer,
-    ]),
-  }));
-
-  return shuffleArray(normalizeResponse);
+export const CreateQuizQuestion = async (data: Questions) => {
+  await api.post(`api/questions`, { ...data });
 };
 
 export const UpdateQuizQuestion = async (id: number, data: Questions) => {

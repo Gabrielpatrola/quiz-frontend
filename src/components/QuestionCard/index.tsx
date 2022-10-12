@@ -1,6 +1,6 @@
 import React from "react";
-import { UserAnswer } from "../pages/Index";
-import { Wrapper, ButtonWrapper } from "./QuestionCard.styles";
+import { UserAnswer } from "../../pages/Index";
+import { Wrapper, ButtonWrapper } from "./style";
 
 type QuestionCardProps = {
   question: string;
