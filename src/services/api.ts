@@ -12,6 +12,8 @@ export type Questions = {
 
 export type QuestionState = Questions & { answers: string[] };
 
+export type QuestionInfo = Questions & { id: number };
+
 export const api = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
   headers: {

@@ -1,12 +1,15 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Index from "./pages/Index";
+import Questions from "./pages/Questions";
 
 function Routes() {
   return (
     <BrowserRouter>
-      <Route path="/" component={Index} exact />
+      <Switch>
+        <Route path="/" component={Index} exact />
+        <Route path="/admin" component={Questions} exact />
+      </Switch>
     </BrowserRouter>
   );
 }

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import QuestionCard from "../../components/QuestionCard";
 import { fetchQuizQuestion } from "../../services/api";
 import { QuestionState } from "../../services/api";
-import { GlobalStyle, Wrapper, FinsihWrapper } from "./index.style";
+import { GlobalStyle, Wrapper, GenericWrapper } from "./style";
+import { useHistory } from "react-router-dom";
 
 export type UserAnswer = {
   question: string;
@@ -23,7 +24,7 @@ function Index() {
   const [counter, setCounter] = useState(0);
   const seconds = String(counter % 60).padStart(2, "0");
   const minutes = String(Math.floor(counter / 60)).padStart(2);
-
+  const history = useHistory();
   const startTriviaAPI = async () => {
     setLoading(true);
     setScore(0);
@@ -118,7 +119,7 @@ function Index() {
             callback={checkAnswer}
           />
         )}
-    
+
         {!gameStart &&
           !loading &&
           userAnswers.length === number + 1 &&
@@ -139,18 +140,21 @@ function Index() {
           )}
 
         {!gameStart && gameOver && !loading && (
-          <FinsihWrapper>
-            <h1>{score > 2 ? 'Parabéns!' : 'Que pena!'}</h1>
+          <GenericWrapper>
+            <h1>{score > 2 ? "Parabéns!" : "Que pena!"}</h1>
             <p>Você terminou o quiz!</p>
             <p>Sua pontuação foi: {score} acertos</p>
             <button className="start" onClick={() => window.location.reload()}>
               Voltar para o início
             </button>
-          </FinsihWrapper>
+          </GenericWrapper>
         )}
+        <button className="start" onClick={() => history.push("/admin")}>
+          Editar quiz
+        </button>
       </Wrapper>
     </>
   );
-};
+}
 
 export default Index;
